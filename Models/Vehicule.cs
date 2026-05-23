@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 using System.Windows.Markup;
 using System.Windows.Media.Media3D;
 
+/**
+ * \brief implantation de la classe modele Vehicule
+ */
+
 namespace TransportManagementSystem.Models
 {
     public class Vehicule

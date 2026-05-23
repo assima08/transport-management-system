@@ -4,6 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+/**
+ * \brief implantation de la classe modele Client
+ */
+
 namespace TransportManagementSystem.Models
 {
     public class Client

@@ -7,6 +7,9 @@ using TransportManagementSystem.Models;
 
 namespace TransportManagementSystem.Models
 {
+    /**
+     * \brief implantation de la classe modele Paiement
+     */
     public class Paiement
     {
         public int Id { get; set; }

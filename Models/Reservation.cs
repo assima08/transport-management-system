@@ -5,6 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using TransportManagementSystem.Models;
 
+/**
+ * \brief implantation de la classe modele Reservation
+ */
+
 namespace TransportManagementSystem.Models
 {
     public class Reservation
