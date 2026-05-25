@@ -24,5 +24,6 @@ namespace TransportManagementSystem.Models
             Pays = p_Pays;
 
         }
+        public Ville() { }
     }
 }
