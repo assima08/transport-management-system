@@ -30,5 +30,6 @@ namespace TransportManagementSystem.Models
             annee = p_annee;
             statut = p_statut;
         }
+        public Vehicule() { }
     }
 }

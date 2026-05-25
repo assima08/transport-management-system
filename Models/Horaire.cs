@@ -28,6 +28,7 @@ namespace TransportManagementSystem.Models
             DateDepart = p_DateDepart;
             DateArrivee = p_DateArrivee;
         }
+        public Horaire() { }   
 
     }
 }

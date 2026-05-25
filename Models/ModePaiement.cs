@@ -21,5 +21,6 @@ namespace TransportManagementSystem.Models
             Name = p_Name;
             Description = p_Description;
         }
+        public ModePaiement() { }
     }
 }

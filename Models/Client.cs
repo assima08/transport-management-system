@@ -26,6 +26,7 @@ namespace TransportManagementSystem.Models
             Telephone = p_Telephone;
             Email = p_Email;
         }
+        public Client() { }
 
     }
 }

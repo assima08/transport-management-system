@@ -29,6 +29,6 @@ namespace TransportManagementSystem.Models
             Statut = p_statut;
             DateReservation = p_DateReservation;
         }
-
+        public Reservation() { }
     }
 }

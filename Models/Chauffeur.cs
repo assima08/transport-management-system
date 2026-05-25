@@ -21,12 +21,13 @@ namespace TransportManagementSystem.Models
         public DateOnly DateExpirationPermis { get; set; }
 
         public Chauffeur(int p_Id, string p_nom, string p_Prenom, string p_Telephone, string p_NumeroPermis, DateOnly p_DateExpirationPermis ) {
-            int id = p_Id;
+            Id = p_Id;
             Nom = p_nom;
             Prenom = p_Prenom;
             Telephone = p_Telephone;
             NumeroPermis = p_NumeroPermis;
             DateExpirationPermis = p_DateExpirationPermis;
         }
+        public Chauffeur() { }
     }
 }

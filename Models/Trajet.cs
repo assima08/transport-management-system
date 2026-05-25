@@ -29,6 +29,6 @@ namespace TransportManagementSystem.Models
             HeureArrivee = p_HeureArrivee;
             Prix = p_Prix;
         }
-
+        Trajet() { }
     }
 }

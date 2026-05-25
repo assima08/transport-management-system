@@ -28,7 +28,6 @@ namespace TransportManagementSystem.Models
             DatePaiement = p_DatePaiement;
             Statut = p_Statut;
         }
-
-            
+        public Paiement() { }   
     }
 }
