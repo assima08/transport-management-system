@@ -21,8 +21,8 @@ namespace TransportManagementSystem.Models
         public int capacite { get; set; }
         public int annee { get; set; }
         public string statut {  get; set; }
-        public Vehicule(int p_id, string p_plaque, string p_marque, string p_modele, int p_capacite, int p_annee,string p_statut ) {
-            Id = p_id;
+        public Vehicule(string p_plaque, string p_marque, string p_modele, int p_capacite, int p_annee,string p_statut ) {
+            
             plaque = p_plaque;
             marque = p_marque;
             modele = p_modele;

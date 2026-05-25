@@ -20,8 +20,8 @@ namespace TransportManagementSystem.Models
         public DateOnly DateDepart {  get; set; }
         public DateOnly DateArrivee { get; set; }
 
-        public Horaire(int p_Id, Vehicule p_Vehicule, Chauffeur p_Chauffeur, Trajet p_Trajet, DateOnly p_DateDepart, DateOnly p_DateArrivee) {
-            Id = p_Id;
+        public Horaire(Vehicule p_Vehicule, Chauffeur p_Chauffeur, Trajet p_Trajet, DateOnly p_DateDepart, DateOnly p_DateArrivee) {
+            
             Vehicule = p_Vehicule;
             Chauffeur = p_Chauffeur;
             Trajet = p_Trajet;

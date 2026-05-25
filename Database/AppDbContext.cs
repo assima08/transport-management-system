@@ -18,7 +18,7 @@ using System.IO;
  */
 namespace TransportManagementSystem.Database
 {
-    internal class AppDbContext : DbContext
+    public class AppDbContext : DbContext
     {
         public DbSet<Client> Clients { get; set; }
         public DbSet<Chauffeur> Chauffeurs { get; set; }

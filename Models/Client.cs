@@ -18,9 +18,9 @@ namespace TransportManagementSystem.Models
         public string Telephone { get; set; }
         public string Email { get; set; }
 
-        public Client(int p_Id, string p_Name, string p_firstName,string p_Telephone, string p_Email) {
+        public Client(string p_Name, string p_firstName,string p_Telephone, string p_Email) {
             
-            Id = p_Id;
+           
             Name = p_Name;
             FirstName = p_firstName;
             Telephone = p_Telephone;

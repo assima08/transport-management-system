@@ -18,7 +18,7 @@ namespace TransportManagementSystem.Models
         public string Pays { get; set; }
 
         public Ville(int p_Id, string P_NomVille, string p_Province, string p_Pays) { 
-            Id = p_Id;
+            
             NomVille = P_NomVille;
             Province = p_Province;
             Pays = p_Pays;

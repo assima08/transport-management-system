@@ -20,8 +20,8 @@ namespace TransportManagementSystem.Models
         public string NumeroPermis { get; set; }
         public DateOnly DateExpirationPermis { get; set; }
 
-        public Chauffeur(int p_Id, string p_nom, string p_Prenom, string p_Telephone, string p_NumeroPermis, DateOnly p_DateExpirationPermis ) {
-            Id = p_Id;
+        public Chauffeur(string p_nom, string p_Prenom, string p_Telephone, string p_NumeroPermis, DateOnly p_DateExpirationPermis ) {
+            
             Nom = p_nom;
             Prenom = p_Prenom;
             Telephone = p_Telephone;

@@ -20,9 +20,9 @@ namespace TransportManagementSystem.Models
         public string Statut { get; set; }
         public DateOnly DateReservation { get; set; }
        
-        public Reservation(int p_Id, Client p_Client, Horaire p_Horaire,int p_numSiege, string p_statut, DateOnly p_DateReservation) { 
+        public Reservation(Client p_Client, Horaire p_Horaire,int p_numSiege, string p_statut, DateOnly p_DateReservation) { 
             
-            Id = p_Id;
+            
             Client = p_Client;
             Horaire = p_Horaire;
             NumSiege = p_numSiege;

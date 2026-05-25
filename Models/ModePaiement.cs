@@ -16,8 +16,8 @@ namespace TransportManagementSystem.Models
         public string Name { get; set; }
         public string Description { get; set; }
 
-        public ModePaiement(int p_Id, string p_Name, string p_Description) {
-            Id = p_Id;
+        public ModePaiement(string p_Name, string p_Description) {
+           
             Name = p_Name;
             Description = p_Description;
         }

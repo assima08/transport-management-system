@@ -20,9 +20,9 @@ namespace TransportManagementSystem.Models
         public TimeOnly HeureArrivee { get; set; }
         public decimal Prix { get; set; }
 
-        public Trajet(int p_Id, int p_VilleDepart, int p_VilleArrivee, TimeOnly p_HeureDepart, TimeOnly p_HeureArrivee, decimal p_Prix)
+        public Trajet(int p_VilleDepart, int p_VilleArrivee, TimeOnly p_HeureDepart, TimeOnly p_HeureArrivee, decimal p_Prix)
         {
-            Id = p_Id;
+            
             VilleDepartId = p_VilleDepart;
             VilleArriveeId = p_VilleArrivee;
             HeureDepart = p_HeureDepart;

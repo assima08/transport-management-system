@@ -19,9 +19,9 @@ namespace TransportManagementSystem.Models
         public DateOnly DatePaiement { get; set; }
         public string Statut { get; set; }
 
-        public Paiement(int p_Id, Reservation p_Reservation, ModePaiement p_ModePaiement, decimal p_Montant, DateOnly p_DatePaiement, string p_Statut)
+        public Paiement(Reservation p_Reservation, ModePaiement p_ModePaiement, decimal p_Montant, DateOnly p_DatePaiement, string p_Statut)
         {
-            Id = p_Id;
+            
             Reservation = p_Reservation;
             ModePaiement = p_ModePaiement;
             Montant = p_Montant;
