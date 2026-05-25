@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TransportManagementSystem.Models;
 using TransportManagementSystem.Database;
+using TransportManagementSystem.Validators;
 using System.IO.Packaging;
 
 namespace TransportManagementSystem.Repositories
@@ -12,23 +13,38 @@ namespace TransportManagementSystem.Repositories
     public class ChauffeurRepository
     {
         private AppDbContext _appDbContext;
+        private readonly ChauffeurValidator _chauffeurValidator;
+
+        public List<string> LastValidationErrors { get; private set; }
 
         //TODO : CONSTRUCTEUR
         public ChauffeurRepository()
         {
             _appDbContext = new AppDbContext();
+            _chauffeurValidator = new ChauffeurValidator();
+            LastValidationErrors = new List<string>();
+        }
+
+        private void ValiderChauffeur(Chauffeur chauffeur)
+        {
+            LastValidationErrors = _chauffeurValidator.Validate(chauffeur);
+
+            if (LastValidationErrors.Count > 0)
+            {
+                throw new InvalidOperationException(string.Join(Environment.NewLine, LastValidationErrors));
+            }
         }
 
         // Ajout par Objet
         public void  AjouterChauffeur(Chauffeur chauffeur)
         {
+            ValiderChauffeur(chauffeur);
             _appDbContext.Chauffeurs.Add(chauffeur);
             _appDbContext.SaveChanges();
         }
         //Ajout par attributs (fera appel a l'ajout par objet).
         public void AjouterEtcreerChauffeur(string p_nom, string p_Prenom, string p_Telephone, string p_NumeroPermis, DateOnly p_DateExpirationPermis)
         {
-            
             Chauffeur chauffeur = new Chauffeur(p_nom,p_Prenom,p_Telephone,p_NumeroPermis,p_DateExpirationPermis);
 
             AjouterChauffeur(chauffeur);
@@ -97,34 +113,78 @@ namespace TransportManagementSystem.Repositories
         {
             Chauffeur it = GetByTelephone(p_numeroTelephone);
             if (it == null) { return; }
-            it.Telephone = p_NewTelephone;
-            
-            _appDbContext.SaveChanges();
 
+            string oldTelephone = it.Telephone;
+            it.Telephone = p_NewTelephone;
+
+            try
+            {
+                ValiderChauffeur(it);
+                _appDbContext.SaveChanges();
+            }
+            catch
+            {
+                it.Telephone = oldTelephone;
+                throw;
+            }
         }
         public void UpdateNumeroPermis(string p_Permis, string p_NewNumPermis)
         {
             Chauffeur it = GetByyNumPermis(p_Permis);
             if (it == null) { return; }
+
+            string oldNumeroPermis = it.NumeroPermis;
             it.NumeroPermis = p_NewNumPermis;
 
-            _appDbContext.SaveChanges();
-
+            try
+            {
+                ValiderChauffeur(it);
+                _appDbContext.SaveChanges();
+            }
+            catch
+            {
+                it.NumeroPermis = oldNumeroPermis;
+                throw;
+            }
         }
         public void UpdateNomParId(int p_id,string p_nom)
         {
             Chauffeur it = GetById(p_id);
             if (it == null) { return; }
+
+            string oldNom = it.Nom;
             it.Nom = p_nom;
-            _appDbContext.SaveChanges();
+
+            try
+            {
+                ValiderChauffeur(it);
+                _appDbContext.SaveChanges();
+            }
+            catch
+            {
+                it.Nom = oldNom;
+                throw;
+            }
         }
 
         public void UpdatePreomParId(int p_id, string p_prenom)
         {
             Chauffeur it = GetById(p_id);
             if (it == null) { return; }
+
+            string oldPrenom = it.Prenom;
             it.Prenom = p_prenom;
-            _appDbContext.SaveChanges();
+
+            try
+            {
+                ValiderChauffeur(it);
+                _appDbContext.SaveChanges();
+            }
+            catch
+            {
+                it.Prenom = oldPrenom;
+                throw;
+            }
         }
 
         //TODO : OBTENIR LA LISTE

@@ -13,6 +13,7 @@
     <Folder Include="Helpers\" />
     <Folder Include="Resources\" />
     <Folder Include="Services\" />
+    <Folder Include="Validators\" />
     <Folder Include="Views\" />
     <Folder Include="ViewModels\" />
   </ItemGroup>
