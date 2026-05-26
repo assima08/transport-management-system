@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<VisioDocument xmlns="urn:schemas-microsoft-com:office:visio" xml:space="preserve">
+  <DocumentProperties>
+    <Title>MCD Global - TransportManagementSystem</Title>
+    <Subject>Modele conceptuel de donnees global selon les modeles C# du projet</Subject>
+    <Creator>Codex</Creator>
+  </DocumentProperties>
+  <Pages>
+    <Page ID="0" NameU="MCD_Global" Name="MCD Global">
+      <PageSheet>
+        <PageProps>
+          <PageWidth>16</PageWidth>
+          <PageHeight>11</PageHeight>
+        </PageProps>
+      </PageSheet>
+      <Shapes>
+        <Shape ID="1" NameU="Ville" Name="Ville" Type="Shape">
+          <XForm><PinX>2</PinX><PinY>8.8</PinY><Width>3</Width><Height>1.6</Height></XForm>
+          <Line><LineWeight>0.018</LineWeight><LineColor>RGB(45,45,45)</LineColor></Line>
+          <Fill><FillForegnd>RGB(232,244,253)</FillForegnd></Fill>
+          <Text>VILLE&#10;------------------------&#10;# Id : int&#10;NomVille : string&#10;Province : string&#10;Pays : string</Text>
+        </Shape>
+        <Shape ID="2" NameU="Trajet" Name="Trajet" Type="Shape">
+          <XForm><PinX>6.4</PinX><PinY>8.8</PinY><Width>3.25</Width><Height>1.9</Height></XForm>
+          <Line><LineWeight>0.018</LineWeight><LineColor>RGB(45,45,45)</LineColor></Line>
+          <Fill><FillForegnd>RGB(234,247,239)</FillForegnd></Fill>
+          <Text>TRAJET&#10;------------------------&#10;# Id : int&#10;VilleDepartId : int&#10;VilleArriveeId : int&#10;HeureDepart : TimeOnly&#10;HeureArrivee : TimeOnly&#10;Prix : decimal</Text>
+        </Shape>
+        <Shape ID="3" NameU="Horaire" Name="Horaire" Type="Shape">
+          <XForm><PinX>10.8</PinX><PinY>8.8</PinY><Width>3.2</Width><Height>1.8</Height></XForm>
+          <Line><LineWeight>0.018</LineWeight><LineColor>RGB(45,45,45)</LineColor></Line>
+          <Fill><FillForegnd>RGB(255,244,224)</FillForegnd></Fill>
+          <Text>HORAIRE&#10;------------------------&#10;# Id : int&#10;Vehicule : Vehicule&#10;Chauffeur : Chauffeur&#10;Trajet : Trajet&#10;DateDepart : DateOnly&#10;DateArrivee : DateOnly</Text>
+        </Shape>
+        <Shape ID="4" NameU="Vehicule" Name="Vehicule" Type="Shape">
+          <XForm><PinX>14</PinX><PinY>6.2</PinY><Width>3</Width><Height>1.85</Height></XForm>
+          <Line><LineWeight>0.018</LineWeight><LineColor>RGB(45,45,45)</LineColor></Line>
+          <Fill><FillForegnd>RGB(241,235,255)</FillForegnd></Fill>
+          <Text>VEHICULE&#10;------------------------&#10;# Id : int&#10;plaque : string&#10;marque : string&#10;modele : string&#10;capacite : int&#10;annee : int&#10;statut : string</Text>
+        </Shape>
+        <Shape ID="5" NameU="Chauffeur" Name="Chauffeur" Type="Shape">
+          <XForm><PinX>10.8</PinX><PinY>5.6</PinY><Width>3.2</Width><Height>1.85</Height></XForm>
+          <Line><LineWeight>0.018</LineWeight><LineColor>RGB(45,45,45)</LineColor></Line>
+          <Fill><FillForegnd>RGB(255,235,238)</FillForegnd></Fill>
+          <Text>CHAUFFEUR&#10;------------------------&#10;# Id : int&#10;Nom : string&#10;Prenom : string&#10;Telephone : string&#10;NumeroPermis : string&#10;DateExpirationPermis : DateOnly</Text>
+        </Shape>
+        <Shape ID="6" NameU="Client" Name="Client" Type="Shape">
+          <XForm><PinX>2</PinX><PinY>4.2</PinY><Width>3</Width><Height>1.65</Height></XForm>
+          <Line><LineWeight>0.018</LineWeight><LineColor>RGB(45,45,45)</LineColor></Line>
+          <Fill><FillForegnd>RGB(232,245,233)</FillForegnd></Fill>
+          <Text>CLIENT&#10;------------------------&#10;# Id : int&#10;Name : string&#10;FirstName : string&#10;Telephone : string&#10;Email : string</Text>
+        </Shape>
+        <Shape ID="7" NameU="Reservation" Name="Reservation" Type="Shape">
+          <XForm><PinX>6.4</PinX><PinY>4.2</PinY><Width>3.25</Width><Height>1.75</Height></XForm>
+          <Line><LineWeight>0.018</LineWeight><LineColor>RGB(45,45,45)</LineColor></Line>
+          <Fill><FillForegnd>RGB(255,249,196)</FillForegnd></Fill>
+          <Text>RESERVATION&#10;------------------------&#10;# Id : int&#10;Client : Client&#10;Horaire : Horaire&#10;NumSiege : int&#10;Statut : string&#10;DateReservation : DateOnly</Text>
+        </Shape>
+        <Shape ID="8" NameU="Paiement" Name="Paiement" Type="Shape">
+          <XForm><PinX>10.8</PinX><PinY>2.2</PinY><Width>3.2</Width><Height>1.75</Height></XForm>
+          <Line><LineWeight>0.018</LineWeight><LineColor>RGB(45,45,45)</LineColor></Line>
+          <Fill><FillForegnd>RGB(227,242,253)</FillForegnd></Fill>
+          <Text>PAIEMENT&#10;------------------------&#10;# Id : int&#10;Reservation : Reservation&#10;ModePaiement : ModePaiement&#10;Montant : decimal&#10;DatePaiement : DateOnly&#10;Statut : string</Text>
+        </Shape>
+        <Shape ID="9" NameU="ModePaiement" Name="ModePaiement" Type="Shape">
+          <XForm><PinX>14</PinX><PinY>2.2</PinY><Width>3</Width><Height>1.35</Height></XForm>
+          <Line><LineWeight>0.018</LineWeight><LineColor>RGB(45,45,45)</LineColor></Line>
+          <Fill><FillForegnd>RGB(243,229,245)</FillForegnd></Fill>
+          <Text>MODE_PAIEMENT&#10;------------------------&#10;# Id : int&#10;Name : string&#10;Description : string</Text>
+        </Shape>
+
+
+        <Shape ID="30" NameU="L_Ville_Trajet_Depart" Name="Ville vers Trajet depart" Type="Shape">
+          <XForm><PinX>4.2</PinX><PinY>9.2</PinY><Width>4.4</Width><Height>0.05</Height><LocPinX>2.2</LocPinX><LocPinY>0.025</LocPinY></XForm>
+          <Line><LineWeight>0.015</LineWeight><LineColor>RGB(80,80,80)</LineColor></Line>
+          <Geom IX="0"><MoveTo IX="1"><X>0</X><Y>0.025</Y></MoveTo><LineTo IX="2"><X>4.4</X><Y>0.025</Y></LineTo></Geom>
+        </Shape>
+        <Shape ID="31" NameU="L_Ville_Trajet_Arrivee" Name="Ville vers Trajet arrivee" Type="Shape">
+          <XForm><PinX>4.2</PinX><PinY>8.4</PinY><Width>4.4</Width><Height>0.05</Height><LocPinX>2.2</LocPinX><LocPinY>0.025</LocPinY></XForm>
+          <Line><LineWeight>0.015</LineWeight><LineColor>RGB(80,80,80)</LineColor></Line>
+          <Geom IX="0"><MoveTo IX="1"><X>0</X><Y>0.025</Y></MoveTo><LineTo IX="2"><X>4.4</X><Y>0.025</Y></LineTo></Geom>
+        </Shape>
+        <Shape ID="32" NameU="L_Trajet_Horaire" Name="Trajet vers Horaire" Type="Shape">
+          <XForm><PinX>8.6</PinX><PinY>8.8</PinY><Width>4.4</Width><Height>0.05</Height><LocPinX>2.2</LocPinX><LocPinY>0.025</LocPinY></XForm>
+          <Line><LineWeight>0.015</LineWeight><LineColor>RGB(80,80,80)</LineColor></Line>
+          <Geom IX="0"><MoveTo IX="1"><X>0</X><Y>0.025</Y></MoveTo><LineTo IX="2"><X>4.4</X><Y>0.025</Y></LineTo></Geom>
+        </Shape>
+        <Shape ID="33" NameU="L_Chauffeur_Horaire" Name="Chauffeur vers Horaire" Type="Shape">
+          <XForm><PinX>10.8</PinX><PinY>7.2</PinY><Width>0.05</Width><Height>3.2</Height><LocPinX>0.025</LocPinX><LocPinY>1.6</LocPinY></XForm>
+          <Line><LineWeight>0.015</LineWeight><LineColor>RGB(80,80,80)</LineColor></Line>
+          <Geom IX="0"><MoveTo IX="1"><X>0.025</X><Y>0</Y></MoveTo><LineTo IX="2"><X>0.025</X><Y>3.2</Y></LineTo></Geom>
+        </Shape>
+        <Shape ID="34" NameU="L_Vehicule_Horaire" Name="Vehicule vers Horaire" Type="Shape">
+          <XForm><PinX>12.4</PinX><PinY>7.5</PinY><Width>3.2</Width><Height>2.6</Height><LocPinX>1.6</LocPinX><LocPinY>1.3</LocPinY></XForm>
+          <Line><LineWeight>0.015</LineWeight><LineColor>RGB(80,80,80)</LineColor></Line>
+          <Geom IX="0"><MoveTo IX="1"><X>3.2</X><Y>0</Y></MoveTo><LineTo IX="2"><X>0</X><Y>2.6</Y></LineTo></Geom>
+        </Shape>
+        <Shape ID="35" NameU="L_Client_Reservation" Name="Client vers Reservation" Type="Shape">
+          <XForm><PinX>4.2</PinX><PinY>4.2</PinY><Width>4.4</Width><Height>0.05</Height><LocPinX>2.2</LocPinX><LocPinY>0.025</LocPinY></XForm>
+          <Line><LineWeight>0.015</LineWeight><LineColor>RGB(80,80,80)</LineColor></Line>
+          <Geom IX="0"><MoveTo IX="1"><X>0</X><Y>0.025</Y></MoveTo><LineTo IX="2"><X>4.4</X><Y>0.025</Y></LineTo></Geom>
+        </Shape>
+        <Shape ID="36" NameU="L_Horaire_Reservation" Name="Horaire vers Reservation" Type="Shape">
+          <XForm><PinX>8.6</PinX><PinY>6.5</PinY><Width>4.4</Width><Height>4.6</Height><LocPinX>2.2</LocPinX><LocPinY>2.3</LocPinY></XForm>
+          <Line><LineWeight>0.015</LineWeight><LineColor>RGB(80,80,80)</LineColor></Line>
+          <Geom IX="0"><MoveTo IX="1"><X>4.4</X><Y>4.6</Y></MoveTo><LineTo IX="2"><X>0</X><Y>0</Y></LineTo></Geom>
+        </Shape>
+        <Shape ID="37" NameU="L_Reservation_Paiement" Name="Reservation vers Paiement" Type="Shape">
+          <XForm><PinX>8.6</PinX><PinY>3.2</PinY><Width>4.4</Width><Height>2</Height><LocPinX>2.2</LocPinX><LocPinY>1</LocPinY></XForm>
+          <Line><LineWeight>0.015</LineWeight><LineColor>RGB(80,80,80)</LineColor></Line>
+          <Geom IX="0"><MoveTo IX="1"><X>0</X><Y>2</Y></MoveTo><LineTo IX="2"><X>4.4</X><Y>0</Y></LineTo></Geom>
+        </Shape>
+        <Shape ID="38" NameU="L_ModePaiement_Paiement" Name="Mode paiement vers Paiement" Type="Shape">
+          <XForm><PinX>12.4</PinX><PinY>2.2</PinY><Width>3.2</Width><Height>0.05</Height><LocPinX>1.6</LocPinX><LocPinY>0.025</LocPinY></XForm>
+          <Line><LineWeight>0.015</LineWeight><LineColor>RGB(80,80,80)</LineColor></Line>
+          <Geom IX="0"><MoveTo IX="1"><X>0</X><Y>0.025</Y></MoveTo><LineTo IX="2"><X>3.2</X><Y>0.025</Y></LineTo></Geom>
+        </Shape>
+        <Shape ID="20" NameU="R_VilleDepart" Name="VilleDepart_Trajet" Type="Shape">
+          <XForm><PinX>4.2</PinX><PinY>9.35</PinY><Width>1.9</Width><Height>0.35</Height></XForm>
+          <Text>1,1 depart  -  0,N trajets</Text>
+        </Shape>
+        <Shape ID="21" NameU="R_VilleArrivee" Name="VilleArrivee_Trajet" Type="Shape">
+          <XForm><PinX>4.2</PinX><PinY>8.25</PinY><Width>1.9</Width><Height>0.35</Height></XForm>
+          <Text>1,1 arrivee  -  0,N trajets</Text>
+        </Shape>
+        <Shape ID="22" NameU="R_TrajetHoraire" Name="Trajet_Horaire" Type="Shape">
+          <XForm><PinX>8.6</PinX><PinY>9.35</PinY><Width>1.9</Width><Height>0.35</Height></XForm>
+          <Text>1,1 trajet  -  0,N horaires</Text>
+        </Shape>
+        <Shape ID="23" NameU="R_ChauffeurHoraire" Name="Chauffeur_Horaire" Type="Shape">
+          <XForm><PinX>10.8</PinX><PinY>7.1</PinY><Width>2.2</Width><Height>0.35</Height></XForm>
+          <Text>1,1 chauffeur  -  0,N horaires</Text>
+        </Shape>
+        <Shape ID="24" NameU="R_VehiculeHoraire" Name="Vehicule_Horaire" Type="Shape">
+          <XForm><PinX>12.55</PinX><PinY>7.65</PinY><Width>2.2</Width><Height>0.35</Height></XForm>
+          <Text>1,1 vehicule  -  0,N horaires</Text>
+        </Shape>
+        <Shape ID="25" NameU="R_ClientReservation" Name="Client_Reservation" Type="Shape">
+          <XForm><PinX>4.2</PinX><PinY>4.75</PinY><Width>2</Width><Height>0.35</Height></XForm>
+          <Text>1,1 client  -  0,N reservations</Text>
+        </Shape>
+        <Shape ID="26" NameU="R_HoraireReservation" Name="Horaire_Reservation" Type="Shape">
+          <XForm><PinX>8.6</PinX><PinY>6.3</PinY><Width>2.25</Width><Height>0.35</Height></XForm>
+          <Text>1,1 horaire  -  0,N reservations</Text>
+        </Shape>
+        <Shape ID="27" NameU="R_ReservationPaiement" Name="Reservation_Paiement" Type="Shape">
+          <XForm><PinX>8.6</PinX><PinY>3.2</PinY><Width>2.2</Width><Height>0.35</Height></XForm>
+          <Text>1,1 reservation  -  0,N paiements</Text>
+        </Shape>
+        <Shape ID="28" NameU="R_ModePaiementPaiement" Name="ModePaiement_Paiement" Type="Shape">
+          <XForm><PinX>12.55</PinX><PinY>2.75</PinY><Width>2.2</Width><Height>0.35</Height></XForm>
+          <Text>1,1 mode  -  0,N paiements</Text>
+        </Shape>
+      </Shapes>
+    </Page>
+  </Pages>
+</VisioDocument>
+
